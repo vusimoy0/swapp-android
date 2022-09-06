@@ -4,17 +4,17 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import dev.vusi.android.swapp.datasource.cache.models.EntitySwApiCharacter
+import dev.vusi.android.swapp.datasource.cache.models.EntityStarWarsCharacter
 import kotlinx.coroutines.flow.Flow
 
 @Dao
-interface SwAppCharacterDao {
+interface StarWarsAppCharacterDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertAllCharacters(characters: List<EntitySwApiCharacter>)
+    suspend fun insertAllCharacters(characters: List<EntityStarWarsCharacter>)
 
     @Query("SELECT * from swapi_characters")
-    fun getAllCharacters(): Flow<List<EntitySwApiCharacter>>
+    fun getAllCharacters(): Flow<List<EntityStarWarsCharacter>>
 
     @Query("DELETE from swapi_characters")
     suspend fun clearAllCharacters()

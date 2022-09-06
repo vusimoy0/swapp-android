@@ -4,7 +4,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class DTOSwApiCharacter(
+data class DTOStarWarsCharacter(
     @SerialName("name")
     val name: String? = null,
     @SerialName("height")

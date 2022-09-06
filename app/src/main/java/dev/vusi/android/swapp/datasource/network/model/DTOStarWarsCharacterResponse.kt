@@ -4,7 +4,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class DTOSwApiCharacterResponse(
+data class DTOStarWarsCharacterResponse(
     @SerialName("count")
     val count: Int? = null,
     @SerialName("height")
@@ -12,5 +12,5 @@ data class DTOSwApiCharacterResponse(
     @SerialName("previous")
     val previous: String? = null,
     @SerialName("results")
-    val results: List<DTOSwApiCharacter>? = null
+    val results: List<DTOStarWarsCharacter>? = null
 )
