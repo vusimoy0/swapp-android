@@ -14,6 +14,7 @@ object AndroidX {
     const val lifecycleRuntimeKtx = "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleRuntimeKtxVersion"
     const val composeMaterial3 = "androidx.compose.material3:material3:$compose_material3_version"
     const val room = "androidx.room:room-runtime:$room_version"
+    const val roomKtx = "androidx.room:room-ktx:$room_version"
     const val roomCompiler = "androidx.room:room-compiler:$room_version"
 
     const val hiltAndroid = "com.google.dagger:hilt-android:$hilt_version"

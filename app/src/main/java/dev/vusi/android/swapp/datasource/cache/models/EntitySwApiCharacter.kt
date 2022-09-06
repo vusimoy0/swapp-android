@@ -1,10 +1,12 @@
-package dev.vusi.android.swapp.datasource.cache
+package dev.vusi.android.swapp.datasource.cache.models
 
 import androidx.room.Entity
+import androidx.room.PrimaryKey
 
 @Entity(tableName = "swapi_characters")
 data class EntitySwApiCharacter(
-    val name: String? = null,
+    @PrimaryKey
+    val name: String = "",
     val height: String? = null,
     val mass: String? = null,
     val hairColor: String? = null,

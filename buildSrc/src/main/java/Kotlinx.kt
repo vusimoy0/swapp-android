@@ -8,4 +8,7 @@ object Kotlinx {
 
     private const val serializationJsonVersion = "1.4.0"
     const val serializationJson = "org.jetbrains.kotlinx:kotlinx-serialization-json:$serializationJsonVersion"
+
+    private const val serialization_converter_version = "0.8.0"
+    const val serializationConverter = "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:$serialization_converter_version"
 }

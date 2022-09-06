@@ -55,6 +55,7 @@ dependencies {
     implementation(AndroidX.lifecycleRuntimeKtx)
     implementation(AndroidX.composeMaterial3)
     implementation(AndroidX.room)
+    implementation(AndroidX.roomKtx)
     ksp(AndroidX.roomCompiler)
 
     //hilt
@@ -80,4 +81,10 @@ dependencies {
     implementation(Square.okHttpClient)
     implementation(Square.okHttpLogging)
     implementation(Kotlinx.serializationJson)
+    implementation(Kotlinx.serializationConverter)
+    implementation(Meta.Stetho)
+    implementation(Meta.StethoOkhttpInterceptor)
+
+    implementation(Kotlinx.coroutinesCore)
+    implementation(Kotlinx.coroutinesAndroid)
 }
