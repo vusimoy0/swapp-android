@@ -79,4 +79,5 @@ dependencies {
     implementation(Square.retrofit)
     implementation(Square.okHttpClient)
     implementation(Square.okHttpLogging)
+    implementation(Kotlinx.serializationJson)
 }
