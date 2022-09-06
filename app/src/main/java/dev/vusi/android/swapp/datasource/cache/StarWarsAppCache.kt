@@ -6,5 +6,5 @@ import kotlinx.coroutines.flow.Flow
 interface StarWarsAppCache {
 
     suspend fun insertData(data: List<EntityStarWarsCharacter>)
-    fun getAllCharacters(): Flow<List<EntityStarWarsCharacter>>
+    suspend fun getAllCharacters(): List<EntityStarWarsCharacter>
 }

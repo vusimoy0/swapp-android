@@ -24,22 +24,26 @@ class GetStarWarsCharacters @Inject constructor(
             emit(DataState.Loading(progressBarState = ProgressBarState.Loading))
 
             val serviceResponse: List<EntityStarWarsCharacter> = try {
-                service.fetchAllCharactersFromRemote().results?.map { it.toEntityStarWarsCharacter() }.orEmpty()
+                service.fetchAllCharactersFromRemote().results?.map { it.toEntityStarWarsCharacter() }
+                    .orEmpty()
             } catch (e: Exception) {
                 e.printStackTrace()
-                emit(DataState.Response(uiComponent = UIComponent.Dialog(
-                    title = "Network Error",
-                    message = e.message ?: "Unknown Error"
-                )))
+                emit(
+                    DataState.Response(
+                        uiComponent = UIComponent.Dialog(
+                            title = "Network Error",
+                            message = e.message ?: "Unknown Error"
+                        )
+                    )
+                )
 
                 listOf()
             }
-            cache.insertData(serviceResponse)
 
+            //store data into cache
+            cache.insertData(serviceResponse)
             //emit from cache
-            cache.getAllCharacters().collectLatest { cacheData ->
-                emit(DataState.Data(data =  cacheData.map { it.toStarWarsCharacter() }))
-            }
+            emit(DataState.Data(data = cache.getAllCharacters().map { it.toStarWarsCharacter() }))
 
         } finally {
             emit(DataState.Loading(progressBarState = ProgressBarState.Idle))

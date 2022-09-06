@@ -14,7 +14,7 @@ interface StarWarsAppCharacterDao {
     suspend fun insertAllCharacters(characters: List<EntityStarWarsCharacter>)
 
     @Query("SELECT * from swapi_characters")
-    fun getAllCharacters(): Flow<List<EntityStarWarsCharacter>>
+    suspend fun getAllCharacters(): List<EntityStarWarsCharacter>
 
     @Query("DELETE from swapi_characters")
     suspend fun clearAllCharacters()

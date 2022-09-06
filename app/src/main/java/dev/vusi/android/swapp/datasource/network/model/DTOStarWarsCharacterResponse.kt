@@ -7,7 +7,7 @@ import kotlinx.serialization.Serializable
 data class DTOStarWarsCharacterResponse(
     @SerialName("count")
     val count: Int? = null,
-    @SerialName("height")
+    @SerialName("next")
     val next: String? = null,
     @SerialName("previous")
     val previous: String? = null,

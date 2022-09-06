@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Swapp</string>
+
+    <!-- character labels -->
+    <string name="label_character_birth_year">Birth Year</string>
+    <string name="label_character_height">Height</string>
+    <string name="label_character_planet">Planet</string>
+    <string name="label_character_species">Species</string>
+    <string name="label_character_films">Films</string>
+
+    <!-- information unavailable_labels -->
+    <string name="info_unavailable_species">No species information available</string>
+    <string name="info_unavailable_movie">No movie information available</string>
+
 </resources>

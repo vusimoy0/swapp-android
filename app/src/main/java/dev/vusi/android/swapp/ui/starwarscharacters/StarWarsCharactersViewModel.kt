@@ -31,7 +31,7 @@ class StarWarsCharactersViewModel @Inject constructor(
                 getStarWarsCharacterList()
             }
 
-            is StarWarsCharacterListEvents.AddCharacterToFavourites -> {
+            is StarWarsCharacterListEvents.OpenCharacter -> {
 
             }
         }
@@ -49,13 +49,13 @@ class StarWarsCharactersViewModel @Inject constructor(
                 }
 
                 is DataState.Loading -> {
-                    state.value = state.value.copy(progressBarState = ProgressBarState.Loading)
+                    state.value = state.value.copy(progressBarState = dataState.progressBarState)
                 }
             }
         }.launchIn(viewModelScope)
     }
 
-    private fun addCharacterToFavourites() {
+    private fun navigateToCharacterDetail() {
         //todo
     }
 }

@@ -4,5 +4,5 @@ sealed class StarWarsCharacterListEvents {
 
     object GetStarWarsCharacterList: StarWarsCharacterListEvents()
 
-    object AddCharacterToFavourites: StarWarsCharacterListEvents()
+    object OpenCharacter: StarWarsCharacterListEvents()
 }

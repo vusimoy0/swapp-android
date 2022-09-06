@@ -6,6 +6,8 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import dev.vusi.android.swapp.datasource.network.SwAppService
+import dev.vusi.android.swapp.datasource.network.SwAppServiceImpl
 import dev.vusi.android.swapp.datasource.network.api.SwApiService
 import kotlinx.serialization.ExperimentalSerializationApi
 import kotlinx.serialization.json.Json
@@ -20,6 +22,12 @@ import javax.inject.Singleton
 object NetworkModule {
 
     private const val BASE_URL = "https://swapi.dev/api/"
+
+    @Provides
+    @Singleton
+    fun providesStarWarsAppService(apiService: SwApiService): SwAppService {
+        return SwAppServiceImpl(apiService)
+    }
 
     @Provides
     @Singleton

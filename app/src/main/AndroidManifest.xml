@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="dev.vusi.android.swapp">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:name="dev.vusi.android.SwAppBaseApplication"
         android:allowBackup="true"
