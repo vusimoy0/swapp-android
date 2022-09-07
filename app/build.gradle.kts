@@ -60,6 +60,7 @@ dependencies {
 
     //hilt
     implementation(AndroidX.hiltAndroid)
+    implementation(AndroidX.hiltNavigationCompose)
     kapt(AndroidX.hiltCompiler)
 
     implementation(Compose.activity)

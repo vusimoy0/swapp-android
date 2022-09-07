@@ -22,7 +22,7 @@ object StarWarsCharacterDataMapper {
             starShips = this.starShips.orEmpty(),
             created = this.created.orEmpty(),
             edited = this.edited.orEmpty(),
-            this.url.orEmpty()
+            url = this.url.orEmpty()
         )
     }
 
@@ -43,7 +43,7 @@ object StarWarsCharacterDataMapper {
             starShips = this.starShips.orEmpty(),
             created = this.created.orEmpty(),
             edited = this.edited.orEmpty(),
-            this.url.orEmpty()
+            url = this.url.orEmpty()
         )
     }
 }
