@@ -18,4 +18,8 @@
     <string name="info_unavailable_species">No species information available</string>
     <string name="info_unavailable_movie">No movie information available</string>
 
+    <!-- dialog strings -->
+    <string name="dialog_text_ok">Ok</string>
+    <string name="dialog_title_error">Error</string>
+
 </resources>

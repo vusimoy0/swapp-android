@@ -5,5 +5,6 @@ import dev.vusi.android.swapp.domain.model.StarWarsCharacter
 
 data class CharacterDetailState(
     val progressBarState: ProgressBarState = ProgressBarState.Idle,
-    val characterProfile: StarWarsCharacter = StarWarsCharacter()
+    val characterProfile: StarWarsCharacter = StarWarsCharacter(),
+    val errorText: String? = null
 )

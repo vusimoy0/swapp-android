@@ -2,7 +2,6 @@ package dev.vusi.android.swapp.interactors
 
 import dev.vusi.android.swapp.core.domain.DataState
 import dev.vusi.android.swapp.core.domain.ProgressBarState
-import dev.vusi.android.swapp.core.domain.UIComponent
 import dev.vusi.android.swapp.datasource.cache.StarWarsAppCache
 import dev.vusi.android.swapp.datasource.cache.models.EntityStarWarsCharacter
 import dev.vusi.android.swapp.datasource.network.SwAppService
@@ -27,15 +26,7 @@ class GetStarWarsCharacters @Inject constructor(
                     .orEmpty()
             } catch (e: Exception) {
                 e.printStackTrace()
-                emit(
-                    DataState.Response(
-                        uiComponent = UIComponent.Dialog(
-                            title = "Network Error",
-                            message = e.message ?: "Unknown Error"
-                        )
-                    )
-                )
-
+                emit(DataState.Response(errorText = e.message ?: "An Unknown Error has occurred"))
                 listOf()
             }
 

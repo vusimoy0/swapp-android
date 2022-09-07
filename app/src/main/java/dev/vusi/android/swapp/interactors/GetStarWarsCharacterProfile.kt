@@ -21,6 +21,7 @@ class GetStarWarsCharacterProfile @Inject constructor(
                 cache.getCharacter(characterName = characterName).toStarWarsCharacter()
             } catch (e: Exception) {
                 e.printStackTrace()
+                emit(DataState.Response(errorText = e.message ?: "An Unknown Error has occurred"))
                 StarWarsCharacter()
             }
 

@@ -31,9 +31,8 @@ class StarWarsCharactersViewModel @Inject constructor(
             is StarWarsCharacterListEvents.GetStarWarsCharacterList -> {
                 getStarWarsCharacterList()
             }
-
-            is StarWarsCharacterListEvents.OpenCharacter -> {
-
+            is StarWarsCharacterListEvents.DismissErrorDialog -> {
+                dismissErrorDialog()
             }
         }
     }
@@ -42,7 +41,7 @@ class StarWarsCharactersViewModel @Inject constructor(
         getStarWarsCharacters.execute().onEach { dataState ->
             when (dataState) {
                 is DataState.Response -> {
-                    //todo - ui component for errors
+                   state.value = state.value.copy(error = dataState.errorText)
                 }
 
                 is DataState.Data -> {
@@ -54,5 +53,9 @@ class StarWarsCharactersViewModel @Inject constructor(
                 }
             }
         }.launchIn(viewModelScope)
+    }
+
+    private fun dismissErrorDialog() {
+        state.value = state.value.copy(error = null)
     }
 }

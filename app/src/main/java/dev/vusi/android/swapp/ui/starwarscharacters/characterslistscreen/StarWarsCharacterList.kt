@@ -11,7 +11,7 @@ fun StarWarsCharacterList(
     listOfCharacters: List<StarWarsCharacter>,
     onCharacterSelected: (String) -> Unit
 ) {
-    
+
     LazyColumn {
         items(listOfCharacters) { characterItem ->
             StarWarsCharacterListItem(

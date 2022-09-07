@@ -37,25 +37,34 @@ class StarWarsCharacterDetailViewModel @Inject constructor(
             is CharacterDetailEvents.GetCharacterProfile -> {
                 getCharacterProfile(event.characterName)
             }
+
+            is CharacterDetailEvents.DismissErrorDialog -> {
+                dismissErrorDialog()
+            }
         }
     }
 
     private fun getCharacterProfile(name: String) {
         getCharacterProfile.execute(name).onEach { dataState ->
-            when(dataState) {
+            when (dataState) {
                 is DataState.Response -> {
-                    //todo - ui component for errors
+                    state.value = state.value.copy(errorText = dataState.errorText)
                 }
 
                 is DataState.Data -> {
-                    state.value = state.value.copy(characterProfile = dataState.data ?: StarWarsCharacter())
+                    state.value =
+                        state.value.copy(characterProfile = dataState.data ?: StarWarsCharacter())
                 }
 
-                is DataState.Loading ->{
+                is DataState.Loading -> {
                     state.value = state.value.copy(progressBarState = dataState.progressBarState)
                 }
 
             }
         }.launchIn(viewModelScope)
+    }
+
+    private fun dismissErrorDialog() {
+        state.value = state.value.copy(errorText = null)
     }
 }
