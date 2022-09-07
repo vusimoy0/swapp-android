@@ -7,6 +7,7 @@ object AndroidX {
     private const val compose_material3_version = "1.0.0-beta01"
     internal const val room_version = "2.4.3"
     internal const val hilt_version = "2.43.2"
+    private const val hilt_navigation_version = "1.0.0"
 
     const val coreKtx = "androidx.core:core-ktx:$coreKtxVersion"
     const val appCompat = "androidx.appcompat:appcompat:$appCompatVersion"
@@ -19,5 +20,6 @@ object AndroidX {
 
     const val hiltAndroid = "com.google.dagger:hilt-android:$hilt_version"
     const val hiltCompiler = "com.google.dagger:hilt-android-compiler:$hilt_version"
+    const val hiltNavigationCompose = "androidx.hilt:hilt-navigation-compose:$hilt_navigation_version"
 
 }

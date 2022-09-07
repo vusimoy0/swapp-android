@@ -1,4 +1,4 @@
-package dev.vusi.android.swapp.ui.starwarscharacters
+package dev.vusi.android.swapp.ui.starwarscharacters.characterslistscreen
 
 import dev.vusi.android.swapp.domain.ProgressBarState
 import dev.vusi.android.swapp.domain.model.StarWarsCharacter

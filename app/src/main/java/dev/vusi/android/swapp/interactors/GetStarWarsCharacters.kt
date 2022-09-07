@@ -10,7 +10,6 @@ import dev.vusi.android.swapp.domain.model.StarWarsCharacter
 import dev.vusi.android.swapp.domain.model.StarWarsCharacterDataMapper.toEntityStarWarsCharacter
 import dev.vusi.android.swapp.domain.model.StarWarsCharacterDataMapper.toStarWarsCharacter
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 

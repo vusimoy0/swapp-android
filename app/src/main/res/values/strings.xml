@@ -4,6 +4,11 @@
     <!-- character labels -->
     <string name="label_character_birth_year">Birth Year</string>
     <string name="label_character_height">Height</string>
+    <string name="label_character_mass">Mass</string>
+    <string name="label_character_hair_color">Hair Color</string>
+    <string name="label_character_skin_color">Skin Color</string>
+    <string name="label_character_eye_color">Eye Color</string>
+    <string name="label_character_gender">Gender</string>
     <string name="label_character_planet">Planet</string>
     <string name="label_character_species">Species</string>
     <string name="label_character_films">Films</string>

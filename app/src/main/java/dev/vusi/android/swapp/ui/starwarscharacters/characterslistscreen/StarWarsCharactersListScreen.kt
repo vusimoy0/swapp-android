@@ -1,19 +1,25 @@
-package dev.vusi.android.swapp.ui.starwarscharacters
+package dev.vusi.android.swapp.ui.starwarscharacters.characterslistscreen
 
+import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.runtime.Composable
 import dev.vusi.android.swapp.domain.ProgressBarState
-import dev.vusi.android.swapp.domain.model.StarWarsCharacter
 
 @Composable
-fun StarWarsCharacters(
+fun StarWarsCharacterListScreen(
     state: StarWarsCharacterListState,
     onTriggerEvent: (StarWarsCharacterListEvents) -> Unit,
-    onClickStarWarsCharacterItem: (StarWarsCharacter) -> Unit
+    onClickStarWarsCharacter: (String) -> Unit
 ) {
+    Column {
+
+    }
     if (state.progressBarState == ProgressBarState.Loading) {
         CircularProgressIndicator()
     } else {
-        StarWarsCharacterList(listOfCharacters = state.starWarsCharacterList, onClick = {})
+        StarWarsCharacterList(
+            listOfCharacters = state.starWarsCharacterList,
+            onCharacterSelected = onClickStarWarsCharacter
+        )
     }
 }

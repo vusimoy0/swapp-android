@@ -6,8 +6,9 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dev.vusi.android.swapp.domain.DataState
-import dev.vusi.android.swapp.domain.ProgressBarState
 import dev.vusi.android.swapp.interactors.GetStarWarsCharacters
+import dev.vusi.android.swapp.ui.starwarscharacters.characterslistscreen.StarWarsCharacterListEvents
+import dev.vusi.android.swapp.ui.starwarscharacters.characterslistscreen.StarWarsCharacterListState
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import javax.inject.Inject
@@ -41,7 +42,7 @@ class StarWarsCharactersViewModel @Inject constructor(
         getStarWarsCharacters.execute().onEach { dataState ->
             when (dataState) {
                 is DataState.Response -> {
-                    //todo - do logging
+                    //todo - ui component for errors
                 }
 
                 is DataState.Data -> {
@@ -53,9 +54,5 @@ class StarWarsCharactersViewModel @Inject constructor(
                 }
             }
         }.launchIn(viewModelScope)
-    }
-
-    private fun navigateToCharacterDetail() {
-        //todo
     }
 }
