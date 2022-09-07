@@ -9,7 +9,7 @@ import androidx.compose.ui.text.style.TextOverflow
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun CharacterProfileAppBar(appBarTitle: String) {
+fun CharacterProfileAppBar(appBarTitle: String, onNavigateBack: () -> Unit) {
     CenterAlignedTopAppBar(
         title = {
             Text(
@@ -19,9 +19,10 @@ fun CharacterProfileAppBar(appBarTitle: String) {
             )
         },
         navigationIcon = {
-            IconButton(onClick = {}) {
+            IconButton(onClick = { onNavigateBack() }) {
                 Icon(imageVector = Icons.Default.ArrowBack, contentDescription = null)
             }
-        }
+        },
+        colors = TopAppBarDefaults.centerAlignedTopAppBarColors(containerColor = MaterialTheme.colorScheme.secondaryContainer),
     )
 }

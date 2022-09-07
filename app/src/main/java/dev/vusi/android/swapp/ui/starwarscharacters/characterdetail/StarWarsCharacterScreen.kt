@@ -12,7 +12,7 @@ fun StarWarsCharacterScreen(
     onTriggerEvent: (CharacterDetailEvents) -> Unit
 ) {
     StarWarsAppTheme {
-        Scaffold(topBar = { CharacterProfileAppBar(appBarTitle = state.characterProfile.name) },
+        Scaffold(topBar = { CharacterProfileAppBar(appBarTitle = state.characterProfile.name, onNavigateBack = {}) },
             content = { StarWarsCharacterProfile(character = state.characterProfile) })
     }
 }

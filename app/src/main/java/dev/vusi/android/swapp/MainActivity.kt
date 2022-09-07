@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import dagger.hilt.android.AndroidEntryPoint
 import dev.vusi.android.swapp.ui.starwarscharacters.navigation.StarWarsNav
+import dev.vusi.android.swapp.ui.theme.StarWarsAppTheme
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
@@ -12,7 +13,9 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-            StarWarsNav()
+            StarWarsAppTheme {
+                StarWarsNav()
+            }
         }
     }
 }

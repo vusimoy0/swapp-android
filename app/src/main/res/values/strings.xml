@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Swapp</string>
 
+    <string name="toolbar_title_characters">Characters</string>
     <!-- character labels -->
     <string name="label_character_birth_year">Birth Year</string>
     <string name="label_character_height">Height</string>
