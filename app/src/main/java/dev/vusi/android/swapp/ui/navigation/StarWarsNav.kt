@@ -1,4 +1,4 @@
-package dev.vusi.android.swapp.ui.starwarscharacters.navigation
+package dev.vusi.android.swapp.ui.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
@@ -10,8 +10,8 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import dev.vusi.android.swapp.ui.starwarscharacters.StarWarsCharactersViewModel
-import dev.vusi.android.swapp.ui.starwarscharacters.characterdetail.StarWarsCharacterDetailViewModel
-import dev.vusi.android.swapp.ui.starwarscharacters.characterdetail.StarWarsCharacterScreen
+import dev.vusi.android.swapp.ui.starwarscharacters.characterdetailscreen.StarWarsCharacterDetailViewModel
+import dev.vusi.android.swapp.ui.starwarscharacters.characterdetailscreen.StarWarsCharacterScreen
 import dev.vusi.android.swapp.ui.starwarscharacters.characterslistscreen.StarWarsCharacterListScreen
 
 @Composable
@@ -51,7 +51,8 @@ fun StarWarsNav() {
                 viewModel(key = StarWarsCharactersViewModel::class.java.name, factory = factory)
             StarWarsCharacterScreen(
                 state = viewModel.state.value,
-                onTriggerEvent = viewModel::onTriggerEvent
+                onTriggerEvent = viewModel::onTriggerEvent,
+                onBackButtonClicked = { navController.popBackStack() }
             )
         }
     }

@@ -1,4 +1,4 @@
-package dev.vusi.android.swapp.ui.starwarscharacters.navigation
+package dev.vusi.android.swapp.ui.navigation
 
 sealed class NavDestinationScreen(val route: String) {
 

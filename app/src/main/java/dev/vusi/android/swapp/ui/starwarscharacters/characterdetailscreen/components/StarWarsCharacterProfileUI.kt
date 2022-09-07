@@ -1,4 +1,4 @@
-package dev.vusi.android.swapp.ui.starwarscharacters.characterdetail.components
+package dev.vusi.android.swapp.ui.starwarscharacters.characterdetailscreen.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column

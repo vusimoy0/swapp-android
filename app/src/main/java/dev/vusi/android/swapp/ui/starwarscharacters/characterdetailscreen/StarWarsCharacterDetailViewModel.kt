@@ -1,4 +1,4 @@
-package dev.vusi.android.swapp.ui.starwarscharacters.characterdetail
+package dev.vusi.android.swapp.ui.starwarscharacters.characterdetailscreen
 
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
