@@ -1,4 +1,4 @@
-# swapp-android
+# SWAPP for Android
 The Starwars Api App
 
 This app makes use of the api found on swapi.dev in order to list a few characters from StarWars as well as their profile. The app makes use of the following:
