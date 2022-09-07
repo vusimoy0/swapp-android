@@ -1,11 +1,11 @@
 package dev.vusi.android.swapp.interactors
 
+import dev.vusi.android.swapp.core.domain.DataState
+import dev.vusi.android.swapp.core.domain.ProgressBarState
+import dev.vusi.android.swapp.core.domain.UIComponent
 import dev.vusi.android.swapp.datasource.cache.StarWarsAppCache
 import dev.vusi.android.swapp.datasource.cache.models.EntityStarWarsCharacter
 import dev.vusi.android.swapp.datasource.network.SwAppService
-import dev.vusi.android.swapp.domain.DataState
-import dev.vusi.android.swapp.domain.ProgressBarState
-import dev.vusi.android.swapp.domain.UIComponent
 import dev.vusi.android.swapp.domain.model.StarWarsCharacter
 import dev.vusi.android.swapp.domain.model.StarWarsCharacterDataMapper.toEntityStarWarsCharacter
 import dev.vusi.android.swapp.domain.model.StarWarsCharacterDataMapper.toStarWarsCharacter

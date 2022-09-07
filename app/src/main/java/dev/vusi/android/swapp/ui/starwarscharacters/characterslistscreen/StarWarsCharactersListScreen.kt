@@ -3,7 +3,7 @@ package dev.vusi.android.swapp.ui.starwarscharacters.characterslistscreen
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.runtime.Composable
-import dev.vusi.android.swapp.domain.ProgressBarState
+import dev.vusi.android.swapp.core.domain.ProgressBarState
 
 @Composable
 fun StarWarsCharacterListScreen(

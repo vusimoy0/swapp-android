@@ -1,4 +1,4 @@
-package dev.vusi.android.swapp.domain
+package dev.vusi.android.swapp.core.domain
 
 sealed class DataState<T> {
 

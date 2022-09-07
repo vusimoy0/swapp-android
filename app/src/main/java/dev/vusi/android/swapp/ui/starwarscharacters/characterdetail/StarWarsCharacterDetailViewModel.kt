@@ -6,7 +6,7 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import dev.vusi.android.swapp.domain.DataState
+import dev.vusi.android.swapp.core.domain.DataState
 import dev.vusi.android.swapp.domain.model.StarWarsCharacter
 import dev.vusi.android.swapp.interactors.GetStarWarsCharacterProfile
 import kotlinx.coroutines.flow.launchIn

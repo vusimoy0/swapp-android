@@ -5,7 +5,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import dev.vusi.android.swapp.domain.DataState
+import dev.vusi.android.swapp.core.domain.DataState
 import dev.vusi.android.swapp.interactors.GetStarWarsCharacters
 import dev.vusi.android.swapp.ui.starwarscharacters.characterslistscreen.StarWarsCharacterListEvents
 import dev.vusi.android.swapp.ui.starwarscharacters.characterslistscreen.StarWarsCharacterListState
