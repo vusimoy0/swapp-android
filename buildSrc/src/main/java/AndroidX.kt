@@ -12,14 +12,18 @@ object AndroidX {
     const val coreKtx = "androidx.core:core-ktx:$coreKtxVersion"
     const val appCompat = "androidx.appcompat:appcompat:$appCompatVersion"
     const val lifecycleVmKtx = "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVmKtxVersion"
-    const val lifecycleRuntimeKtx = "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleRuntimeKtxVersion"
+    const val lifecycleRuntimeKtx =
+        "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleRuntimeKtxVersion"
     const val composeMaterial3 = "androidx.compose.material3:material3:$compose_material3_version"
+
     const val room = "androidx.room:room-runtime:$room_version"
     const val roomKtx = "androidx.room:room-ktx:$room_version"
     const val roomCompiler = "androidx.room:room-compiler:$room_version"
+    const val roomTesting = "androidx.room:room-testing:$room_version"
 
     const val hiltAndroid = "com.google.dagger:hilt-android:$hilt_version"
     const val hiltCompiler = "com.google.dagger:hilt-android-compiler:$hilt_version"
-    const val hiltNavigationCompose = "androidx.hilt:hilt-navigation-compose:$hilt_navigation_version"
+    const val hiltNavigationCompose =
+        "androidx.hilt:hilt-navigation-compose:$hilt_navigation_version"
 
 }

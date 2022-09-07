@@ -2,8 +2,8 @@ package dev.vusi.android.swapp.ui.starwarscharacters.characterdetail
 
 import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
-import dev.vusi.android.swapp.ui.starwarscharacters.characterdetail.components.CharacterProfileAppBar
 import dev.vusi.android.swapp.ui.starwarscharacters.characterdetail.components.StarWarsCharacterProfile
+import dev.vusi.android.swapp.ui.starwarscharacters.components.CharacterProfileAppBar
 import dev.vusi.android.swapp.ui.theme.StarWarsAppTheme
 
 @Composable

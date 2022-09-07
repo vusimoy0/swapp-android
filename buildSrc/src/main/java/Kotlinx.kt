@@ -5,6 +5,7 @@ object Kotlinx {
     private const val coroutinesCoreVersion = "1.6.4"
     const val coroutinesCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesCoreVersion"
     const val coroutinesAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesCoreVersion"
+    const val coroutineTesting = "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutinesCoreVersion"
 
     private const val serializationJsonVersion = "1.4.0"
     const val serializationJson = "org.jetbrains.kotlinx:kotlinx-serialization-json:$serializationJsonVersion"

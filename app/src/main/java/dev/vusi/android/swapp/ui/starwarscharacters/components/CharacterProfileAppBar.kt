@@ -1,4 +1,4 @@
-package dev.vusi.android.swapp.ui.starwarscharacters.characterdetail.components
+package dev.vusi.android.swapp.ui.starwarscharacters.components
 
 
 import androidx.compose.material.icons.Icons

@@ -55,6 +55,8 @@ dependencies {
     implementation(AndroidX.coreKtx)
     implementation(AndroidX.lifecycleRuntimeKtx)
     implementation(AndroidX.composeMaterial3)
+
+    //room
     implementation(AndroidX.room)
     implementation(AndroidX.roomKtx)
     ksp(AndroidX.roomCompiler)
@@ -90,4 +92,15 @@ dependencies {
 
     implementation(Kotlinx.coroutinesCore)
     implementation(Kotlinx.coroutinesAndroid)
+
+    //testing
+    testImplementation(Testing.androidXCore)
+    testImplementation(Testing.androidxJunit4)
+    testImplementation(Testing.junit4)
+    testImplementation(Testing.androidxTruth)
+    testImplementation(AndroidX.roomTesting)
+    testImplementation(Testing.robolectric)
+    testImplementation(Testing.instantTaskExecutorRule)
+    testImplementation(Kotlinx.coroutineTesting)
+    testImplementation(Testing.mockK)
 }
